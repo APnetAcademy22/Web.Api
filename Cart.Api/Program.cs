@@ -1,4 +1,4 @@
-using Product.Api.SQL;
+using Cart.Api.SQL;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -8,7 +8,7 @@ builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
-builder.Services.AddSingleton<IProductDataProvider, ProductDataProvider>(x => new ProductDataProvider(builder.Configuration.GetConnectionString("ProductConnectionString") ) );
+builder.Services.AddSingleton<ICartDataProvider, CartDataProvider>(x => new CartDataProvider(builder.Configuration.GetConnectionString("ConnectionString")));
 
 var app = builder.Build();
 

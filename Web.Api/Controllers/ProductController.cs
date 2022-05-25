@@ -1,8 +1,8 @@
 using Microsoft.AspNetCore.Mvc;
-using Web.Api.Models;
-using Web.Api.SQL;
+using Product.Api.Models;
+using Product.Api.SQL;
 
-namespace Web.Api.Controllers
+namespace Product.Api.Controllers
 {
     [ApiController]
     [Route(template: "Product")]
@@ -18,19 +18,19 @@ namespace Web.Api.Controllers
         }
 
         [HttpGet(template: "{Id}")]
-        public Product Get(int Id)
+        public Models.Product Get(int Id)
         {
             return _productDataProvider.GetById(Id);
         }
 
         [HttpPut(template: "Add")]
-        public void Add(Product product)
+        public void Add(Models.Product product)
         {
             _productDataProvider.Add(product);
         }
 
         [HttpPost(template: "Edit")]
-        public void Edit(Product product)
+        public void Edit(Models.Product product)
         {
             _productDataProvider.Edit(product);
         }
@@ -42,12 +42,9 @@ namespace Web.Api.Controllers
         }
 
         [HttpGet(template: "List")]
-        public IEnumerable<Product> GetList(int? number)
+        public IEnumerable<Models.Product> GetList(int? number)
         {
-            if (number == null)
-                return _productDataProvider.GetAll();
-
-            return _productDataProvider.GetMany(number.GetValueOrDefault());
+            return number == null ? _productDataProvider.GetAll() : _productDataProvider.GetMany(number.GetValueOrDefault());
         }
     }
 }
