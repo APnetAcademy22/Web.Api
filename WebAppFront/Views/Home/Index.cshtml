@@ -1,12 +1,11 @@
-﻿@page
-@model IndexModel
+﻿@model IEnumerable<Product.Api.Models.Product>
 @{
     ViewData["Title"] = "Home page";
 }
 
 <div class="text-center">
     <h1 class="display-4">Yuk!</h1>
-    <p><a href=asp-page="/Cart">Carrello ( @Model.ProductList.Count() )</a></p>
+    <p>@Html.ActionLink("Carrello", "Carrello")</p>
     <table class="table">
         <tr>
             <th>Nome</th>
@@ -15,9 +14,9 @@
             <th>Quantità</th>
             <th></th>
         </tr>
-    @if(Model != null && Model.ProductList.Any() )
+    @if(Model != null && Model.Any() )
     {
-        foreach(var product in Model.ProductList)
+        foreach(var product in Model)
         {
             <tr>
                 <td>@product.Name</td>
@@ -37,3 +36,4 @@
 
     </table>
 </div>
+
