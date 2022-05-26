@@ -5,7 +5,7 @@ using Cart.Api.SQL;
 namespace Cart.Api.Controllers
 {
     [ApiController]
-    [Route("[controller]")]
+    [Route("cart")]
     public class CartController : ControllerBase
     {
 

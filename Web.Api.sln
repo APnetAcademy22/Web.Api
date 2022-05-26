@@ -5,7 +5,9 @@ VisualStudioVersion = 17.2.32516.85
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Product.Api", "Web.Api\Product.Api.csproj", "{6ED51291-53D9-4456-A01C-7F76A396ACDF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cart.Api", "Cart.Api\Cart.Api.csproj", "{7266441B-8C9F-4B75-B7ED-2C70C94CF628}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Cart.Api", "Cart.Api\Cart.Api.csproj", "{7266441B-8C9F-4B75-B7ED-2C70C94CF628}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApp", "WebApp\WebApp.csproj", "{C6F88EFE-B32D-42EA-9ECD-2B526FC4FC3E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{7266441B-8C9F-4B75-B7ED-2C70C94CF628}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7266441B-8C9F-4B75-B7ED-2C70C94CF628}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7266441B-8C9F-4B75-B7ED-2C70C94CF628}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C6F88EFE-B32D-42EA-9ECD-2B526FC4FC3E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C6F88EFE-B32D-42EA-9ECD-2B526FC4FC3E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C6F88EFE-B32D-42EA-9ECD-2B526FC4FC3E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C6F88EFE-B32D-42EA-9ECD-2B526FC4FC3E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
